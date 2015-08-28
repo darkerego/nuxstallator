@@ -3,7 +3,7 @@
 ## 	PC Deploy V 1.0 -- Author DarkerEgo  	##
 ##################################################
 ## Define Programs to install/uninstall here:
-GETLIST="harden-clients secure-delete git gimp vlc"
+GETLIST="harden-clients secure-delete git gimp vlc intel-microcode linux-firmware-nonfree"
 KILLLIST="popularity-contest"
 ########
 cwd=$(pwd)
@@ -16,11 +16,13 @@ FWERROR1='Error enabling firewall!'
 FWERROR2='Error opening port or port already open.'
 AptError1='Error updating system!'
 #########
-if [ ! -d $cwd/conf ]; then
-mkdir conf
-echo $confERROR1
-exit
-fi
+# Directory for configuration files if applicable
+#########
+#if [ ! -d $cwd/conf ]; then
+#mkdir conf
+#echo $confERROR1
+#exit
+#fi
 
 echo -e "
 #####################################################
